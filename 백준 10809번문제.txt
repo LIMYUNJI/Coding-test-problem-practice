@@ -1,0 +1,38 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        // BufferedReader로 입력 받기
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
+
+        // 입력받은 문자열 저장
+        String str = br.readLine();
+
+        // 알파벳 위치를 저장할 배열 (-1로 초기화)
+        int[] positions = new int[26];
+        Arrays.fill(positions, -1);
+
+        // 문자열을 순회하면서 각 알파벳의 위치를 기록
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i); // 현재 문자
+            int index = c - 'a';   // 해당 알파벳의 배열 인덱스 계산
+
+            // 해당 알파벳이 처음 등장한 경우에만 기록
+            if (positions[index] == -1) {
+                positions[index] = i;
+            }
+        }
+
+        // 결과를 StringBuilder에 추가
+        for (int position : positions) {
+            sb.append(position).append(" ");
+        }
+
+        // 결과 출력
+        System.out.println(sb);
+    }
+}
