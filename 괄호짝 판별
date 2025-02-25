@@ -1,0 +1,29 @@
+package Stack;
+
+import java.util.Stack;
+
+public class Test01 {
+
+	class Solution {
+		private boolean solution(String str) {
+			Stack<Character> stack = new Stack<>();
+			
+
+			char[] a = str.toCharArray(); // 문자를 하나씩 조꺠서 배열에 저장
+			for (char c : a) {
+				if (c == '(') {
+					stack.push(c);
+				} else {
+					if (stack.isEmpty() || stack.pop() == c) { 
+						//  스택이 비어있을 때 pop( ) 메서드를 호출하면 EmptyStackException 예외가 발생합니다
+						return false;
+					}
+				}
+			}
+
+			return stack.isEmpty();
+		}
+
+	}
+	
+}
