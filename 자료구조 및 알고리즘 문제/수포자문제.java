@@ -9,10 +9,18 @@ public class Test04 {
 		public static int[] solution(int[] answers) {
 			// 수포자 패턴
 			int[][] pattern = {
-					{1,2,3,4,5},{2,1,2,3,2,4,2,5},{3,3,1,1,2,2,4,4,5,5}
+					{1,2,3,4,5},
+					{2,1,2,3,2,4,2,5},
+					{3,3,1,1,2,2,4,4,5,5}
 					
 			};
-			return answers;
+			// 수포자들을 저장할 배열
+
+			// 각 수포자의 패턴의 정답이 얼마나 일치하는지 확인
+
+			// 가장 높은 점수 저장
+			// 가장 높은 점수를 가진 수포자들의 번호를 찾아서 리스트에 담음
+			return answers.stream().mapToInt(Interger::intValue).toArray();
 		}
 	}
 	
