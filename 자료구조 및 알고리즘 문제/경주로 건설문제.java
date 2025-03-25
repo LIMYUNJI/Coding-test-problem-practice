@@ -12,7 +12,8 @@ class Solution {
         }
     }
     // 코너 계산
-    
+    int[] x = {0,0,-1,1};
+    int[] y= {1,-1,0,0};
     public int solution(int N, int[][] road, int K) {
         ArrayList<Node>[] adjList = new ArrayList[N+1];
         int answer = 0;
