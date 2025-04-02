@@ -10,5 +10,7 @@ class Solution{
   }
 
   public static String[] soltion(String[] s){
+    StringBuilder start = new StringBuilder();
+    ArrayDeque<> stack = new ArrayDeque<>();
   }
 }
