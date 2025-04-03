@@ -19,7 +19,10 @@ class Solution{
 
       for(char c : end){
         stack.push(c);
-        if(stack.size() > 3){
+        if(stack.size() >= 3){
+          char s3 = stack.pop();
+          char s2 = stack.pop();
+          char s1 = stack.pop();
           
         }
       }
