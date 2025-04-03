@@ -10,7 +10,19 @@ class Solution{
   }
 
   public static String[] soltion(String[] s){
-    StringBuilder start = new StringBuilder();
-    ArrayDeque<> stack = new ArrayDeque<>();
+    String[] answer = new String[s.length];
+
+    for(int i = 0; i < s.length; i++){
+      StringBuilder start = new StringBuilder();
+      ArrayDeque<Character> stack = new ArrayDeque<>();
+      char[] end = s[i].toCharArray();
+
+      for(char c : end){
+        stack.push(c);
+        if(stack.size() > 3){
+          
+        }
+      }
+    }
   }
 }
