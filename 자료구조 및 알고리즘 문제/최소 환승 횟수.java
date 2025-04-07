@@ -57,7 +57,7 @@ public class Main {
         Queue<Integer> q = new LinkedList<>();
         Queue<Integer> transferQ = new LinkedList<>();
 
-        // 출발역과 연결된 모든 노선을 먼저 큐에 넣음
+        // 출발역과 연결된 모든 노선을 먼저 추가
         for (int line : station[start]) {
             q.add(line);
             visitedSubwayLine[line] = true;
@@ -74,7 +74,7 @@ public class Main {
                 int curLine = q.poll();
 
                 for (int s : subwayline[curLine]) {
-                    if (s == end) return transfer;
+                    if (s == end) return transfer-1; // 첫탑승 제외 -1
 
                     if (!visitedStation[s]) {
                         visitedStation[s] = true;
