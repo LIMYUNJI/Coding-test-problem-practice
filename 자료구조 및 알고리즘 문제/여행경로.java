@@ -15,6 +15,13 @@ class Solution{
   boolean[] visited;
   ArrayList<String> arr = new ArrayList<>();
 
+  // 사용한 공항권, 현재위치, 여행 경로, 항공권 정보
+  public void bfs( int count, String start, String path, String[][] tickets){
+    if(count == n){ // 사용한 항공권이 주어진 항공권 갯수와 같아지면
+      arr.add(path);
+      return;
+    }
+  }
   
   public String[] solution(String[][] tickets){
     
