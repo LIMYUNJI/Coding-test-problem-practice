@@ -16,14 +16,28 @@ class Solution{
   ArrayList<String> arr = new ArrayList<>();
 
   // 사용한 공항권, 현재위치, 여행 경로, 항공권 정보
-  public void bfs( int count, String start, String path, String[][] tickets){
-    if(count == n){ // 사용한 항공권이 주어진 항공권 갯수와 같아지면
+  public void back( int use, String start, String path, String[][] tickets){
+    if(use == n){ // 사용한 항공권이 주어진 항공권 갯수와 같아지면
       arr.add(path);
       return;
+    }
+    for(int i =0; i < n; i++){
+      if(!visited[[i] && tickets[i][0].equals(start)){
+        visited[i] = true;
+        back(use +1, tickets[i][0], path, " " + tickets[i][1], tickets);
+        visited[i] = false;
+      }
     }
   }
   
   public String[] solution(String[][] tickets){
+    n = tickets.length;
+    visited = new boolean[n+1];
+    back(0, "ICN", "ICN", tickets);
+
+
+    Collections.sort(arr);
     
+    return arr.get(0).split(" ");
   }
 }
