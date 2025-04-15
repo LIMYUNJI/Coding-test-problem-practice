@@ -1,7 +1,8 @@
 class Solution{
-  private static int n;
+  private static int size = 0;
   private static int[] Weak;
   private static boolean visited;
+  private static List<List<Integer>> a = new ArrayList<>():
   // n: 외벽의 길이, weak 취약지점의 위치, dist 친구들이 이동할 수 있는 거리
 
   //  입력받은 친구들이 외벽 점검이 가능한지
@@ -21,7 +22,7 @@ class Solution{
     
   }
   public int solution(int n, int[] weak, int[] dist){
-    
+    Weak = weak;
     return result;
   }
 }
