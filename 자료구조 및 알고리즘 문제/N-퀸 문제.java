@@ -2,12 +2,12 @@
 // 여왕이 추가될 때마다 행이나, 대각선 방향에 겹치는 여왕이 있으면 더 탐색하지 않기
 
 class Soultion{
-  private static int N;
-  private static boolean[] width;
+  private static int N; // 체스판 크기
+  private static boolean[] width; // 특정 열에 퀸이 위치했는지 표시
   private static boolean[] d1; // 가로 대각선
   private static boolean[] d2; // 세로 대각선
 
-  private static int getAns(int y){
+  private static int getAns(int y){ // ㅛy는 현재 퀸을 놓을 위치
     int ans = 0;
     if(y == N){
       ans++;
