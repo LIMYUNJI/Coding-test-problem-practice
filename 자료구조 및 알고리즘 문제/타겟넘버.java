@@ -13,7 +13,7 @@ class Solution {
      
     public int solution(int[] numbers, int target) {
         answer = 0;
-        dfs(0, 0, numbers, target);
+        dfs(0, 0, numbers, target); // 재귀 함수
         return answer;
     }
 }
