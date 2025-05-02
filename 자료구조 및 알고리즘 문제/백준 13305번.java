@@ -5,10 +5,8 @@
 // - 최소 가격 주유소에서 최대한 많이 넣기.
 // - 현재까지의 최소 기름값을 기억하면서, 그 가격으로 다음 도시까지 가는 거리를 계산.
 
-
-
 import java.io.*;
-import java.util.*;
+import java.util.StringTokenizer;
 
 public class Main {
     public static int N;
