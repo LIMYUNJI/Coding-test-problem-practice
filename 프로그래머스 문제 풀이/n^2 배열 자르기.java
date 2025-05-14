@@ -1,9 +1,10 @@
 class Solution {
     public int[] solution(int n, long left, long right) {
         int[] answer = new int[(int)(right - left)+1];
-        // 2차원 배열에서 좌표로 변화
-        int count = 0;
-        
+        int index = 0;
+        for(long i = left; i <= right; i++){ // 좌표값
+            answer[index++] = (int)Math.max(i/n, i%n) + 1;
+        }
         return answer;
     }
 }
