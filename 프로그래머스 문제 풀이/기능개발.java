@@ -6,8 +6,8 @@ progresses[i]는 i번째 기능의 진도 (%), speeds[i]는 하루에 작업 가
 배포마다 몇 개의 기능이 배포되는지를 배열로 반환한다.
 */
 
-
 import java.util.List;
+import java.util.ArrayList;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
