@@ -13,30 +13,28 @@ class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
         List<Integer> result = new ArrayList<>();
         
-        // 각 기능이 완료되기까지 걸리는 일 수 계산
+        // 각 기능이 완료되기까지 걸리는 일 수
         int[] days = new int[progresses.length];
         for (int i = 0; i < progresses.length; i++) {
             int remain = 100 - progresses[i];
             days[i] = (int) Math.ceil((double) remain / speeds[i]);
         }
 
-        // 배포 로직
+        // 배포
         int current = days[0];
         int count = 1;
         
         for (int i = 1; i < days.length; i++) {
             if (days[i] <= current) {
-                count++;  // 같이 배포 가능
+                count++;
             } else {
                 result.add(count);
-                current = days[i];  // 기준 갱신
+                current = days[i];
                 count = 1;
             }
         }
         
-        result.add(count);  // 마지막 배포
-        
-        // 리스트를 배열로 변환
+        result.add(count); 
         return result.stream().mapToInt(i -> i).toArray();
     }
 }
