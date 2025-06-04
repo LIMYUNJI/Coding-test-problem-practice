@@ -11,25 +11,26 @@ import java.util.ArrayList;
 
 class Solution {
     public int[] solution(int[] progresses, int[] speeds) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<>(); // 배포 되는 기능의 수
         
         // 각 기능이 완료되기까지 걸리는 일 수
         int[] days = new int[progresses.length];
         for (int i = 0; i < progresses.length; i++) {
-            int remain = 100 - progresses[i];
-            days[i] = (int) Math.ceil((double) remain / speeds[i]);
+            int rest = 100 - progresses[i]; // 
+            days[i] = (int) Math.ceil((double) rest / speeds[i]);
+            //   Math.ceil -> 정수 올림(음수 포함)
         }
 
         // 배포
-        int current = days[0];
+        int distribute = days[i];
         int count = 1;
         
         for (int i = 1; i < days.length; i++) {
-            if (days[i] <= current) {
+            if (days[i] <= distribute) {
                 count++;
             } else {
                 result.add(count);
-                current = days[i];
+                distribute = days[i];
                 count = 1;
             }
         }
