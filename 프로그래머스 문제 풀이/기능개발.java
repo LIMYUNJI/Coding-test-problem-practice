@@ -22,7 +22,7 @@ class Solution {
         }
 
         // 배포
-        int distribute = days[i];
+        int distribute = days[0];
         int count = 1;
         
         for (int i = 1; i < days.length; i++) {
