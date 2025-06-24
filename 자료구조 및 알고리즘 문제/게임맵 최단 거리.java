@@ -22,6 +22,16 @@ class Solution {
       ArrayDeque<Interger> queue = new ArrayDeque<>();
 
       // 넓이 우선 탐색 구현
+      queue.addLast(new Node(0, 0)));
+      dist[0][0] = 1;
+
+        // 큐가 빌떄까지 반복
+        While(!queue.isEmpty()){
+            Node node = queue.pollFist();
+            f0r(){
+                
+            }
+        }
       int answer = 0;
         return answer;
     }
