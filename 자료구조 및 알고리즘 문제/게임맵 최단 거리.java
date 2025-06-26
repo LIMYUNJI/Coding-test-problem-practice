@@ -28,8 +28,11 @@ class Solution {
         // 큐가 빌떄까지 반복
         While(!queue.isEmpty()){
             Node node = queue.pollFist();
-            f0r(){
-                
+            
+            // 현재 이동할 수 있는 모든 방향
+            f0r(int i = 0; i < 4; i++ ){
+            int movex = node.x[i];
+            int movey = node.y[i];
             }
         }
       int answer = 0;
