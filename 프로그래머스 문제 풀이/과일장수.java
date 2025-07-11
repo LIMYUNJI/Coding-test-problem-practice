@@ -7,13 +7,13 @@
 // * 사과는 상자 단위로만 판매하며 남는 사과는 버림
 
 // 그리디 알고리즘
-// 유망하수: 박스를 포장해 팔 때, 가장 점수가 낮은 사과 기준으로 박스를 만
+// 유망하수: 박스를 포장해 팔 때, 가장 점수가 낮은 사과 기준으로 박스를 만든다
 class Solution {
     public int solution(int k, int m, int[] score) {
         int answer = 0;
 
             for(int i = 0; i < score.length; i++){
-            score[i] = 
+            
         }
         return answer;
     }
