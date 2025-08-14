@@ -3,6 +3,9 @@
 
 //  옮겨지는 아이의 수 = n-수열길이
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Main {
   public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
@@ -13,8 +16,15 @@ public class Main {
     }
     List<Integer> list = ArrayList<>(); // 수열의 길이
 
+    Arrays.sort(list);
     for(int num : arr){
-      
+     int a = Collections.binarySearch(list, num);
+     if(a < 0) {
+      a = -(a+1);
+      }else if( a == list.size()){
+       list.add(num);
+      } else {
+       list.set(a, num);
     }
     System.out.println(N-list.size());
   }
