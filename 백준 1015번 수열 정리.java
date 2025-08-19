@@ -18,4 +18,18 @@ public class Main {
         }
 
         // 값 기준 정렬
-        Arrays.sort(ar
+        Arrays.sort(arr, Comparator.comparingInt(o -> o[0]));
+
+        // P 배열 생성
+        int[] P = new int[N];
+        for (int i = 0; i < N; i++) {
+            int index = arr[i][1];
+            P[index] = i; // 정렬 후 위치
+        }
+
+        // 출력
+        for (int i = 0; i < N; i++) {
+            System.out.print(P[i] + " ");
+        }
+    }
+}
