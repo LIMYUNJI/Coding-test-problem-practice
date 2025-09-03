@@ -1,0 +1,10 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+public Class Main{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(Stream.in);
+  }
+  
+}
