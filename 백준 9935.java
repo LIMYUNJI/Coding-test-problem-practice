@@ -13,6 +13,13 @@ public class Main{
         origin = br.readLine().toCharArray();
         bomb = br.readLine().toCharArray();
         int bombIdx = bomb.length - 1;
-        ArrayDeque<Character> deque = new ArrayDeque<Character>();
+        ArrayDeque<Character> stack = new ArrayDeque<Character>();
+
+      for(int i = 0; i< origin.length; i++){
+          if(){
+          
+          } else if() { // bomb 같은 문자가 2개 겹치는 경우
+          
+      }
   }
 }
