@@ -1,0 +1,18 @@
+class Solution {
+    public int solution(String[] babbling) {
+		String[] arr = { "aya", "ye", "woo", "ma" }; // 가능한 발음
+        int answer = 0; // 조카가 발음할 수 있는 단어의 갯수
+        
+        for(String word : babbling){
+            for(String a : arr){
+                word = word.replace(a , " ");
+                }
+               if(word.trim().isEmpty()){
+                    answer++;
+            }
+            
+        }
+        
+        return answer;
+    }
+}
