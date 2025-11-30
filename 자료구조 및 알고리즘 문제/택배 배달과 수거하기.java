@@ -8,9 +8,12 @@ class Solution {
         for(int i = n - 1; i >= 0;i--){
             del += deliveries[i];
             pick += pickups[i];
-            
+        }
+                int delCnt = 0; // 배달상자 수
+                int pickCnt = 0; // 수거 상자 수
+        
                 // 현재까지 누적된 배달 또는 수거 상자가 남아있는 경우
-                while(del > 0 || pick > 0){
+                while(del > delCnt || pick > pickCnt){
                      // 돌아올때
                     del -= cap;
                     pick -= cap;
