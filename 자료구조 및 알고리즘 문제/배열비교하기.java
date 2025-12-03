@@ -4,9 +4,11 @@ class Solution {
         int sum2 = 0;
         
         if (arr1.length != arr2.length){
-            return arr1.length > arr2.length ? 1 : -1;
-          
-        } else {
+            if(arr1.length > arr2.length){
+                return 1;
+            }
+                return -1;
+        }
             for (int i : arr1) {
                 sum1 += i;
             }
